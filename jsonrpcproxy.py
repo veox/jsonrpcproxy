@@ -170,9 +170,9 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         self.log_message("Request:  {}".format(request_content))
         # eth_syncing has additional wrapping of [] X_X
         if request_content[0] == ord(b'[') and request_content[-1] == ord(b']'):
-            self.log_message('>>> FUCK YOU JAVASCRIPT AND YOUR HELL-KNOWS-WHERE-THIS-CAME-FROM')
+            self.log_message('>>> Stripping JSON-RPC batch brackets from single-query batch...')
             request_content = request_content[1:-1]
-            self.log_message("RequestNU:{}".format(request_content))
+            self.log_message("Request (modified): {}".format(request_content))
         self.log_message('>>> ---------------- END request --------------')
 
         try:
