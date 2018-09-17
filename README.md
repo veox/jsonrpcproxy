@@ -13,8 +13,12 @@ in particular, to interface with `eth-net-intelligence-api`, as it
 exists in [branch `break-to-work-with-trinity`][enia-branch] of my
 repo fork.
 
+A `systemd` `.service` file is also included; see others needed to
+run Trinity in [this gist][service-files].
+
 PROVIDED AS-IS. No, seriously - this is not a license warning; what
 can be seen here is a dirty commit I didn't think I'd publish.
 
 [script-source]: https://raw.githubusercontent.com/ethereum/aleth/0eb14b2b7aea2431f3661690e7d8edb004eae26a/scripts/jsonrpcproxy.py
 [enia-branch]: https://github.com/veox/eth-net-intelligence-api/tree/break-to-work-with-trinity
+[service-files]: https://gist.github.com/veox/d1ff3f3ac4f3e013b1f03e7077b47add
