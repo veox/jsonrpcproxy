@@ -1,0 +1,13 @@
+[Unit]
+Description=JSON-RPC proxy to ethereum node IPC socket
+After=network.target
+Requires=trinity.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/veox/src/jsonrpcproxy
+ExecStart=/home/veox/src/jsonrpcproxy/jsonrpcproxy.py /home/veox/.local/share/trinity/ropsten/jsonrpc.ipc
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
